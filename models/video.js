@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
       view: DataTypes.INTEGER,
       section: DataTypes.STRING,
       sound_id: DataTypes.INTEGER,
-      privacy_type: DataTypes.STRING,
+      privacy_type: DataTypes.BOOLEAN,
       allow_comments: DataTypes.STRING,
       allow_duet: DataTypes.INTEGER,
       block: DataTypes.INTEGER,

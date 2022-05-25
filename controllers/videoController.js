@@ -15,12 +15,21 @@ async function getAllVideos(req, res) {
 
 async function addVideo(req, res) {
   try {
-    const { video, duet_video_id, old_video_id, duration } = req.body;
+    const {
+      video,
+      description,
+      privacy_type,
+      duet_video_id,
+      old_video_id,
+      duration,
+    } = req.body;
 
     const videoItem = await Video.create({
       video,
       duet_video_id,
       old_video_id,
+      description,
+      privacy_type,
       duration,
       created: new Date(),
     });
